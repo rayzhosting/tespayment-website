@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rayz Official - Pembayaran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script>
+    function copyToClipboard(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Nomor berhasil disalin: " + text);
+      }).catch(err => {
+        alert("Gagal menyalin: " + err);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://files.catbox.moe/icvznl.png" alt="Rayz Official Logo"/>
+    </div>
+    <h1>Metode Pembayaran</h1>
+
+    <div class="payment-methods">
+      <div class="payment-card">
+        <div class="payment-icon"><i class="fas fa-wallet"></i></div>
+        <div class="payment-name">DANA</div>
+        <div class="payment-number" id="dana-number">085602574511</div>
+        <button class="copy-button" onclick="copyToClipboard('dana-number')">
+          <i class="fas fa-copy"></i> Salin
+        </button>
+      </div>
+
+      <div class="payment-card">
+        <div class="payment-icon"><i class="fab fa-google-pay"></i></div>
+        <div class="payment-name">GOPAY</div>
+        <div class="payment-number" id="gopay-number">085602574511</div>
+        <button class="copy-button" onclick="copyToClipboard('gopay-number')">
+          <i class="fas fa-copy"></i> Salin
+        </button>
+      </div>
+
+      <div class="payment-card">
+        <div class="payment-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="payment-name">OVO</div>
+        <div class="payment-number" id="ovo-number">0857*****</div>
+        <button class="copy-button" onclick="copyToClipboard('ovo-number')">
+          <i class="fas fa-copy"></i> Salin
+        </button>
+      </div>
+    </div>
+
+    <div class="qris-section">
+      <div class="qris-title">Atau Scan QRIS</div>
+      <img src="https://files.catbox.moe/p1725x.png" alt="QRIS Payment" class="qris-image"/>
+      <div class="note">
+        <p>Setelah melakukan pembayaran, harap konfirmasi dengan mengirimkan bukti transfer ke admin.</p>
+        <p>Terima kasih telah berbelanja di Rayz Official!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
